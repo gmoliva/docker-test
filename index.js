@@ -4,9 +4,9 @@ import dotenv from "dotenv";
 const app = express();
 const router = express.Router();
 
-dotenv.config()
+dotenv.config({path:'./.env'} );
 
-const PRINT_THIS_SHIT = process.env.HOLA
+const PRINT_THIS_SHIT = process.env.HOLA;
 
 app.use(express.json());
 
@@ -15,7 +15,7 @@ app.use("/general", router.get("/test", (req, res) => {
     res.status(200).json({ message: "insert generic response" })
 }));
 
-const PORT = 3000;
+const PORT = 3001;
 
 try {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}
