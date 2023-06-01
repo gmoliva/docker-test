@@ -3,9 +3,10 @@ import dotenv from "dotenv";
 
 const app = express();
 const router = express.Router();
+
 dotenv.config()
 
-PRINT_THIS_SHIT = process.env.hola
+const PRINT_THIS_SHIT = process.env.HOLA
 
 app.use(express.json());
 
